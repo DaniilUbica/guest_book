@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest Book</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+<div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="col-12 text-center">
+        <h1>Enter a new comment</h1>
+        <form id="content-form" onsubmit="return validateForm()">
+            <label for="mail"></label>
+            <input required placeholder="Your mail" type="email" id="mail" name="mail"><br><br>
+            <label for="login"></label>
+            <input required placeholder="Your login" type="text" id="login" name="login"><br><br>
+            <label class="comment-label" for="comment"></label>
+            <input required placeholder="Your comment" type="text" id="comment" name="comment"><br><br>
+            <input class="btn btn-light" type="submit" value="Send comment">
+        </form>
+    </div>
+</div>
+<script src="static/post_form_to_json.js"></script>
+<script src="static/validate_form.js"></script>
+<script>
+    handleFormSubmit('content-form', '/new_comment');
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

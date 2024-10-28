@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    background: linear-gradient(45deg, #db6c6c, #d02f2f);
+    height: 200%;
+    background-size: 200% 200%;
+    animation: gradientAnimation 3s ease infinite;
+}
+
+.card {
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+    width: 50%;
+    overflow: hidden;
+}
